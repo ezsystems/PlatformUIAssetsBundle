@@ -10,5 +10,10 @@
     ],
     "require": {
         "symfony/symfony": "~2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "EzSystems\\PlatformUIAssetsBundle\\": ""
+        }
     }
 }
