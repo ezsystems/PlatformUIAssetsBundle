@@ -1,0 +1,14 @@
+{
+    "name": "ezsystems/platform-ui-assets-bundle",
+    "description": "External assets dependencies for PlatformUIBundle",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Damien Pobel",
+            "email": "dp@ez.no"
+        }
+    ],
+    "require": {
+        "symfony/symfony": "~2.5"
+    }
+}
