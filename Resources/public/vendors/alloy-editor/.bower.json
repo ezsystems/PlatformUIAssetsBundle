@@ -1,0 +1,35 @@
+{
+  "name": "alloyeditor",
+  "version": "0.3.7",
+  "homepage": "http://alloyeditor.com",
+  "authors": [
+    "Iliyan Peychev <iliyan.peychev@gmail.com>"
+  ],
+  "description": "AlloyEditor, a modern WYSIWYG editor, build on top of CKEditor",
+  "main": [
+    "dist/alloy-editor/assets/alloy-editor-ocean-min.css",
+    "dist/alloy-editor/alloy-editor-all-min.js"
+  ],
+  "keywords": [
+    "WYSIWYG",
+    "editor",
+    "React"
+  ],
+  "license": "GNU LGPL",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.3.7",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.3.7",
+    "commit": "db62f210f319fc056ff8880698d0c16375ed02ea"
+  },
+  "_source": "git://github.com/liferay/alloy-editor.git",
+  "_target": "~0.3.0",
+  "_originalSource": "liferay/alloy-editor"
+}
