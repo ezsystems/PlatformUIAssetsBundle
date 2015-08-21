@@ -17,6 +17,6 @@
     "ez-js-rest-client": "ezsystems/ez-js-rest-client",
     "yui3": "http://yui.zenfs.com/releases/yui3/yui_3.18.1.zip",
     "flag-icon-css": "~0.6.4",
-    "alloy-editor": "liferay/alloy-editor#~0.3.0"
+    "alloy-editor": "liferay/alloy-editor#~0.5.0"
   }
 }
