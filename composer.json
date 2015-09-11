@@ -15,5 +15,9 @@
         "psr-4": {
             "EzSystems\\PlatformUIAssetsBundle\\": ""
         }
+    },
+    "branch-alias": {
+        "dev-master": "1.0.x-dev"
     }
+ 
 }
