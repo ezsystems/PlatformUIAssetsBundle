@@ -1,0 +1,3 @@
+This is a customized YUI3 version.
+To decrease the size of the bundle, it does not include the API docs,
+the documentation and the unit tests
