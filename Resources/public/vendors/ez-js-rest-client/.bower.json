@@ -1,0 +1,32 @@
+{
+  "name": "eZ Publish JavaScript REST Client",
+  "homepage": "https://github.com/ezsystems/ez-js-rest-client",
+  "authors": [
+    "eZ Systems"
+  ],
+  "main": [
+    "dist/CAPI.js"
+  ],
+  "license": "http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt",
+  "private": true,
+  "ignore": [
+    "docs",
+    "src",
+    "test",
+    "wrap",
+    "*.json",
+    ".travis.yml",
+    "Gruntfile.js",
+    "README.md",
+    "logo-ez.png"
+  ],
+  "_release": "06493668d1",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "06493668d167d818099d134415e4d5d2fa20ffaf"
+  },
+  "_source": "git://github.com/ezsystems/ez-js-rest-client.git",
+  "_target": "*",
+  "_originalSource": "ezsystems/ez-js-rest-client"
+}
