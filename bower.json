@@ -17,8 +17,8 @@
     "ez-js-rest-client": "ezsystems/ez-js-rest-client",
     "yui3": "http://yui.zenfs.com/releases/yui3/yui_3.18.1.zip",
     "flag-icon-css": "~0.6.4",
-    "alloy-editor": "ezsystems/alloy-editor#~0.6.0",
-    "widget": "http://download.ckeditor.com/widget/releases/widget_4.5.3.zip",
-    "lineutils": "http://download.ckeditor.com/lineutils/releases/lineutils_4.5.3.zip"
+    "alloy-editor": "liferay/alloy-editor#~0.7.5",
+    "widget": "http://download.ckeditor.com/widget/releases/widget_4.5.5.zip",
+    "lineutils": "http://download.ckeditor.com/lineutils/releases/lineutils_4.5.5.zip"
   }
 }
