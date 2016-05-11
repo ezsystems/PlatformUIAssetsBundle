@@ -15,3 +15,7 @@ $ ./bin/prepare_release.sh -v 0.10
 ```
 
 and follow the instructions.
+
+## Testing / Developer tasks
+
+Testing of this lib can be done from PlatformUIBundle, see [PlatformUIBundle/README.md](https://github.com/ezsystems/PlatformUIBundle/blob/master/README.md#developers-tasks) for further instructions.
