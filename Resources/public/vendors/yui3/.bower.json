@@ -1,0 +1,13 @@
+{
+  "name": "yui3",
+  "_cacheHeaders": {
+    "ETag": "\"YM:1:43568f70-c704-4036-a80a-ee9312d622b5000505f73bad0651\"",
+    "Last-Modified": "Tue, 21 Oct 2014 23:31:39 GMT",
+    "Content-Length": "39477673",
+    "Content-Type": "application/zip; charset=utf-8"
+  },
+  "_release": "e-tag:YM:1:4356",
+  "_source": "http://yui.zenfs.com/releases/yui3/yui_3.18.1.zip",
+  "_target": "*",
+  "_originalSource": "http://yui.zenfs.com/releases/yui3/yui_3.18.1.zip"
+}
