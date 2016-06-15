@@ -19,6 +19,7 @@
     "flag-icon-css": "~0.6.4",
     "alloy-editor": "liferay/alloy-editor#~0.7.5",
     "widget": "http://download.ckeditor.com/widget/releases/widget_4.5.5.zip",
-    "lineutils": "http://download.ckeditor.com/lineutils/releases/lineutils_4.5.5.zip"
+    "lineutils": "http://download.ckeditor.com/lineutils/releases/lineutils_4.5.5.zip",
+    "react": "0.14.2"
   }
 }
