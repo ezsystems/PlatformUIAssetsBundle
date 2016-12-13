@@ -45,6 +45,8 @@ YUI3_DIR="$VENDOR_DIR/yui3"
 YUI3_NOTICE="$YUI3_DIR/YUI3_IN_PLATFORMUIASSETSBUNDLE.txt"
 ALLOY_DIR="$VENDOR_DIR/alloy-editor"
 ALLOY_NOTICE="$ALLOY_DIR/ALLOY_IN_PLATFORMUIASSETSBUNDLE.txt"
+INTL_DIR="$VENDOR_DIR/handlebars-helper-intl"
+INTL_NOTICE="$INTL_DIR/INTL_IN_PLATFORMUIASSETSBUNDLE.txt"
 
 CURRENT_BRANCH=`git branch | grep '*' | cut -d ' ' -f 2`
 TMP_BRANCH="version_$VERSION"
@@ -76,6 +78,11 @@ check_process "clean alloy-editor"
 echo "This is a customized Alloy version." > $ALLOY_NOTICE
 echo "To decrease the size of the bundle, it does not include API docs and lib" >> $ALLOY_NOTICE
 
+echo "# Removing js maps from handlebars-helper-intl"
+rm -rf $INTL_DIR/dist/*.map
+check_process "clean handlebars-helper-intl"
+echo "This is a customized handlebars-helper-intl version." > $INTL_NOTICE
+echo "To decrease the size of the bundle, it does not include js maps" >> $INTL_NOTICE
 
 echo "# Creating the custom branch: $TMP_BRANCH"
 git checkout -q -b "$TMP_BRANCH" > /dev/null
