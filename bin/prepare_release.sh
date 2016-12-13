@@ -58,7 +58,7 @@ check_process "switch to master"
 
 echo "# Removing the assets"
 [ ! -d "$VENDOR_DIR" ] && mkdir -p $VENDOR_DIR
-[ -d "$VENDOR_DIR" ] && rm -rf "$VENDOR_DIR/*"
+[ -d "$VENDOR_DIR" ] && rm -rf $VENDOR_DIR/*
 check_process "clean the vendor dir $VENDOR_DIR"
 
 echo "# Bower install"
@@ -66,7 +66,7 @@ bower install
 check_process "run bower"
 
 echo "# Removing, docs, API docs and tests from YUI"
-rm -rf "$YUI3_DIR/api" "$YUI3_DIR/docs" "$YUI3_DIR/tests" "$YUI3_DIR/build/*/*-coverage.js" "$YUI3_DIR/build/*/*-debug.js"
+rm -rf "$YUI3_DIR/api" "$YUI3_DIR/docs" "$YUI3_DIR/tests" $YUI3_DIR/build/*/*-coverage.js $YUI3_DIR/build/*/*-debug.js
 check_process "clean YUI"
 echo "This is a customized YUI3 version." > $YUI3_NOTICE
 echo "To decrease the size of the bundle, it does not include the API docs," >> $YUI3_NOTICE
