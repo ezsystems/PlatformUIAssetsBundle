@@ -45,6 +45,8 @@ YUI3_DIR="$VENDOR_DIR/yui3"
 YUI3_NOTICE="$YUI3_DIR/YUI3_IN_PLATFORMUIASSETSBUNDLE.txt"
 ALLOY_DIR="$VENDOR_DIR/alloy-editor"
 ALLOY_NOTICE="$ALLOY_DIR/ALLOY_IN_PLATFORMUIASSETSBUNDLE.txt"
+INTL_DIR="$VENDOR_DIR/handlebars-helper-intl"
+INTL_NOTICE="$INTL_DIR/INTL_IN_PLATFORMUIASSETSBUNDLE.txt"
 
 CURRENT_BRANCH=`git branch | grep '*' | cut -d ' ' -f 2`
 TMP_BRANCH="version_$VERSION"
@@ -56,7 +58,7 @@ check_process "switch to master"
 
 echo "# Removing the assets"
 [ ! -d "$VENDOR_DIR" ] && mkdir -p $VENDOR_DIR
-[ -d "$VENDOR_DIR" ] && rm -rf "$VENDOR_DIR/*"
+[ -d "$VENDOR_DIR" ] && rm -rf $VENDOR_DIR/*
 check_process "clean the vendor dir $VENDOR_DIR"
 
 echo "# Bower install"
@@ -64,7 +66,7 @@ bower install
 check_process "run bower"
 
 echo "# Removing, docs, API docs and tests from YUI"
-rm -rf "$YUI3_DIR/api" "$YUI3_DIR/docs" "$YUI3_DIR/tests" "$YUI3_DIR/build/*/*-coverage.js" "$YUI3_DIR/build/*/*-debug.js"
+rm -rf "$YUI3_DIR/api" "$YUI3_DIR/docs" "$YUI3_DIR/tests" $YUI3_DIR/build/*/*-coverage.js $YUI3_DIR/build/*/*-debug.js
 check_process "clean YUI"
 echo "This is a customized YUI3 version." > $YUI3_NOTICE
 echo "To decrease the size of the bundle, it does not include the API docs," >> $YUI3_NOTICE
@@ -76,6 +78,11 @@ check_process "clean alloy-editor"
 echo "This is a customized Alloy version." > $ALLOY_NOTICE
 echo "To decrease the size of the bundle, it does not include API docs and lib" >> $ALLOY_NOTICE
 
+echo "# Removing js maps from handlebars-helper-intl"
+rm -rf $INTL_DIR/dist/*.map
+check_process "clean handlebars-helper-intl"
+echo "This is a customized handlebars-helper-intl version." > $INTL_NOTICE
+echo "To decrease the size of the bundle, it does not include js maps" >> $INTL_NOTICE
 
 echo "# Creating the custom branch: $TMP_BRANCH"
 git checkout -q -b "$TMP_BRANCH" > /dev/null
