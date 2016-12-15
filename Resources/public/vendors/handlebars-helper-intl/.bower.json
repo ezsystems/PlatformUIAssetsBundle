@@ -1,0 +1,14 @@
+{
+  "name": "handlebars-helper-intl",
+  "homepage": "https://github.com/yahoo/handlebars-helper-intl",
+  "version": "1.1.2",
+  "_release": "1.1.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.1.2",
+    "commit": "ca7eea6577dbedb1f5ac565db64e7b1318a1d526"
+  },
+  "_source": "https://github.com/yahoo/handlebars-helper-intl.git",
+  "_target": "~1.1.2",
+  "_originalSource": "handlebars-helper-intl"
+}

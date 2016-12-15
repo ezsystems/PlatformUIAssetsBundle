@@ -1,0 +1,2 @@
+This is a customized handlebars-helper-intl version.
+To decrease the size of the bundle, it does not include js maps
