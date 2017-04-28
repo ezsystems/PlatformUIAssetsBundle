@@ -9,7 +9,7 @@ dependencies are only available in the tags.
 
 ## Install dependencies for dev use
 
-For local dev use _(testing newer packages.json dependencies, ..)_ make sure you have [`bower`](https://bower.io/) installed and run the following:
+For local dev use _(testing newer bower.json dependencies, ..)_ make sure you have [`bower`](https://bower.io/) installed and run the following:
 
 ```bash
 $ bower install
