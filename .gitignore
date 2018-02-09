@@ -1,0 +1,3 @@
+# this should be present in tags, but not in branches
+Resources/public/vendors/
+composer.lock

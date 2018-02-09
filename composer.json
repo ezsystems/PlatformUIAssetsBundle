@@ -1,7 +1,7 @@
 {
     "name": "ezsystems/platform-ui-assets-bundle",
     "description": "External assets dependencies for PlatformUIBundle",
-    "license": "GPL-2.0",
+    "license": "GPL-2.0-only",
     "authors": [
         {
             "name": "Damien Pobel",
