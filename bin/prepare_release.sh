@@ -16,7 +16,7 @@ print_usage()
 
 VERSION=""
 BUILD_BRANCH_TARGET="master"
-while getopts "hbv:" opt ; do
+while getopts "hb:v:" opt ; do
     case $opt in
         b ) BUILD_BRANCH_TARGET=$OPTARG ;;
         v ) VERSION=$OPTARG ;;
@@ -55,9 +55,9 @@ CURRENT_BRANCH=`git branch | grep '*' | cut -d ' ' -f 2`
 TMP_BRANCH="version_$VERSION"
 TAG="v$VERSION"
 
-echo "# Switching to $BUILD_BRANCH_TARGET and updating"
+echo "# Switching to '$BUILD_BRANCH_TARGET' and updating"
 git checkout -q $BUILD_BRANCH_TARGET > /dev/null && git pull > /dev/null
-check_process "switch to $BUILD_BRANCH_TARGET"
+check_process "switch to '$BUILD_BRANCH_TARGET'"
 
 echo "# Removing the assets"
 [ ! -d "$VENDOR_DIR" ] && mkdir -p $VENDOR_DIR
