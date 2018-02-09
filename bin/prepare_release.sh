@@ -9,13 +9,16 @@ print_usage()
     echo "This script MUST be run from the bundle root directory. It will create"
     echo "a tag but this tag will NOT be pushed"
     echo ""
-    echo "Usage: $1 -v <version>"
+    echo "Usage: $1 -v <version> [-b <branch>]"
     echo "-v version : where version will be used to create the tag"
+    echo "-b branch : Branch you want to build, default is master"
 }
 
 VERSION=""
-while getopts "hv:" opt ; do
+BUILD_BRANCH_TARGET="master"
+while getopts "hb:v:" opt ; do
     case $opt in
+        b ) BUILD_BRANCH_TARGET=$OPTARG ;;
         v ) VERSION=$OPTARG ;;
         h ) print_usage "$0"
             exit 0 ;;
@@ -52,9 +55,9 @@ CURRENT_BRANCH=`git branch | grep '*' | cut -d ' ' -f 2`
 TMP_BRANCH="version_$VERSION"
 TAG="v$VERSION"
 
-echo "# Switching to master and updating"
-git checkout -q master > /dev/null && git pull > /dev/null
-check_process "switch to master"
+echo "# Switching to '$BUILD_BRANCH_TARGET' and updating"
+git checkout -q $BUILD_BRANCH_TARGET > /dev/null && git pull > /dev/null
+check_process "switch to '$BUILD_BRANCH_TARGET'"
 
 echo "# Removing the assets"
 [ ! -d "$VENDOR_DIR" ] && mkdir -p $VENDOR_DIR
@@ -89,7 +92,7 @@ git checkout -q -b "$TMP_BRANCH" > /dev/null
 check_process "create the branch '$TMP_BRANCH'"
 
 echo "# Commiting"
-git add Resources > /dev/null
+git add -f Resources > /dev/null
 git commit -q -m "Version $VERSION"
 check_process "commit the assets"
 
