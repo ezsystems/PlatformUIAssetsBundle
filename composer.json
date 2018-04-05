@@ -4,8 +4,8 @@
     "license": "GPL-2.0-only",
     "authors": [
         {
-            "name": "Damien Pobel",
-            "email": "dp@ez.no"
+            "name": "eZ dev-team & eZ Community",
+            "homepage": "https://github.com/ezsystems/PlatformUIAssetsBundle/contributors"
         }
     ],
     "require": {
