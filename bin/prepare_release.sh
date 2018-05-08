@@ -45,7 +45,6 @@ check_command "bower"
 
 VENDOR_DIR=`cat .bowerrc | grep "directory" | cut -d ':' -f 2 | sed 's/[ "]//g'`
 YUI3_DIR="$VENDOR_DIR/yui3"
-YUI3_NOTICE="$YUI3_DIR/YUI3_IN_PLATFORMUIASSETSBUNDLE.txt"
 ALLOY_DIR="$VENDOR_DIR/alloy-editor"
 ALLOY_NOTICE="$ALLOY_DIR/ALLOY_IN_PLATFORMUIASSETSBUNDLE.txt"
 INTL_DIR="$VENDOR_DIR/handlebars-helper-intl"
@@ -68,12 +67,12 @@ echo "# Bower install"
 bower install
 check_process "run bower"
 
-echo "# Removing, docs, API docs and tests from YUI"
-rm -rf "$YUI3_DIR/api" "$YUI3_DIR/docs" "$YUI3_DIR/tests" $YUI3_DIR/build/*/*-coverage.js $YUI3_DIR/build/*/*-debug.js
-check_process "clean YUI"
-echo "This is a customized YUI3 version." > $YUI3_NOTICE
-echo "To decrease the size of the bundle, it does not include the API docs," >> $YUI3_NOTICE
-echo "the documentation, the unit tests or the generated debug/coverage versions of YUI code." >> $YUI3_NOTICE
+
+echo "# Checkout last known YUI build given it is no longer available for download"
+rm -Rf $YUI3_DIR
+mkdir -p $YUI3_DIR
+git co v4.1.0 $YUI3_DIR
+check_process "checkout YUI3 from v4.1.0"
 
 echo "# Removing API docs and lib from alloy-editor"
 rm -rf "$ALLOY_DIR/api" "$ALLOY_DIR/lib"
