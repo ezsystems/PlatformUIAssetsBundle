@@ -27,6 +27,8 @@ $ ./bin/prepare_release.sh -v 0.10
 
 and follow the instructions.
 
+_NOTE: As of 4.0 the script also takes a -b argument to specify branch to build, e.g. `-b 4.0`._
+
 ## Testing / Developer tasks
 
 Testing of this lib can be done from PlatformUIBundle, see [PlatformUIBundle/README.md](https://github.com/ezsystems/PlatformUIBundle/blob/master/README.md#developers-tasks) for further instructions.
