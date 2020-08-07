@@ -1,0 +1,13 @@
+{
+  "name": "alloy-editor",
+  "_cacheHeaders": {
+    "ETag": "\"be7025f2a312b2f895f6d4b374e2d8e3\"",
+    "Last-Modified": "Fri, 31 Jul 2020 16:34:44 GMT",
+    "Content-Length": "2183147",
+    "Content-Type": "application/octet-stream"
+  },
+  "_release": "e-tag:be7025f2a",
+  "_source": "https://registry.npmjs.org/alloyeditor/-/alloyeditor-1.5.28.tgz",
+  "_target": "*",
+  "_originalSource": "https://registry.npmjs.org/alloyeditor/-/alloyeditor-1.5.28.tgz"
+}
